@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekisteröitymislomake</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Rekisteröitymislomake</h1>
+        <p>Siirry kentästä toiseen tab-näppäimellä.</p>
+        <form>
+            <div class="row">
+                <div class="col-25">
+                    <label for="username">Käyttäjä ID:</label>
+                    <input type="text" id="username" name="username">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="password">Salasana:</label>
+                    <input type="password" id="password" name="password">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="name">Nimi:</label>
+                    <input type="text" id="name" name="name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="address">Osoite:</label>
+                    <input type="text" id="address" name="address">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="country">Maa:</label>
+                    <select id="country" name="country">
+                        <option value="valitse">Valitse maa</option>
+                        <option value="islanti">Islanti</option>
+                        <option value="norja">Norja</option>
+                        <option value="ruotsi">Ruotsi</option>
+                        <option value="suomi">Suomi</option>
+                        <option value="tanska">Tanska</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="postnumber">Postinumero:</label>
+                    <input type="text" id="postnumber" name="postnumber">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="email">Sähköposti:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label>Sukupuoli:</label>
+                    <input type="radio" id="gender_m" name="sex" value="man">
+                    <label for="gender_m">Mies</label>
+                    <input type="radio" id="gender_w" name="sex" value="woman">
+                    <label for="gender_w">Nainen</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label>Kieli:</label>
+                    <input type="checkbox" id="fin_language" name="language" value="suomi">
+                    <label for="fin_language">Suomi</label>
+                    <input type="checkbox" id="other_language" name="language" value="muu kuin suomi">
+                    <label for="other_language">Muu kuin suomi</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label>Lisätietoja:</label>
+                    <textarea id="information" name="information"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <input type="submit" value="Lähetä">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
