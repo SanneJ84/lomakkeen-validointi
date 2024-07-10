@@ -18,6 +18,7 @@ h1,p {
 input[type="text"],
 input[type="password"],
 input[type="email"],
+input[type="number"],
 textarea,
 select {
     width: 70%;
@@ -37,11 +38,6 @@ select {
     width: 100%;
 }
 
-input[type="submit"] {
-    display: block;
-    margin: 0 auto;
-}
-
 input[type="radio"],
 input[type="checkbox"] {
     margin-right: 5px;
@@ -49,7 +45,7 @@ input[type="checkbox"] {
 
 input[type="text"][name="username"],
 input[type="password"][name="password"],
-input[type="text"][name="postnumber"] {
+input[type="number"][name="postnumber"] {
     width: 35%;
 }
 
@@ -79,7 +75,32 @@ label {
 
 textarea {
     display: inline-block;
-    width: 70%; 
     height: 150px;
     vertical-align: top;
+}
+
+button {
+    width: 20%;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #383636;
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+/* Poistaa nuolipainikkeet numero-syötekentistä */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+span {
+    color: red;
+    font-size: 15px;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
 }

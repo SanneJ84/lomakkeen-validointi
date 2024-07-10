@@ -10,89 +10,97 @@
 
 <body>
     <div class="container">
-        <h1>Rekisteröitymislomake</h1>
-        <p>Siirry kentästä toiseen tab-näppäimellä.</p>
-        <form>
-            <div class="row">
-                <div class="col-25">
-                    <label for="username">Käyttäjä ID:</label>
-                    <input type="text" id="username" name="username">
+        <div id="main">
+            <h1>Rekisteröitymislomake</h1>
+            <p>Siirry kentästä toiseen tab-näppäimellä.</p>
+            <form name="lomake">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="username">Käyttäjä ID:</label>
+                        <input type="text" id="username" name="username">
+                        <span id="usernameError"></span>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="password">Salasana:</label>
-                    <input type="password" id="password" name="password">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="password">Salasana:</label>
+                        <input type="password" id="password" name="password">
+                        <span id="passwordError"></span>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="name">Nimi:</label>
-                    <input type="text" id="name" name="name">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="name">Nimi:</label>
+                        <input type="text" id="name" name="name">
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="address">Osoite:</label>
-                    <input type="text" id="address" name="address">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="address">Osoite:</label>
+                        <input type="text" id="address" name="address">
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="country">Maa:</label>
-                    <select id="country" name="country">
-                        <option value="valitse">Valitse maa</option>
-                        <option value="islanti">Islanti</option>
-                        <option value="norja">Norja</option>
-                        <option value="ruotsi">Ruotsi</option>
-                        <option value="suomi">Suomi</option>
-                        <option value="tanska">Tanska</option>
-                    </select>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="country">Maa:</label>
+                        <select id="country" name="country">
+                            <option value="">Valitse maa</option>
+                            <option value="islanti">Islanti</option>
+                            <option value="norja">Norja</option>
+                            <option value="ruotsi">Ruotsi</option>
+                            <option value="suomi">Suomi</option>
+                            <option value="tanska">Tanska</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="postnumber">Postinumero:</label>
-                    <input type="text" id="postnumber" name="postnumber">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="postnumber">Postinumero:</label>
+                        <input type="number" id="postnumber" name="postnumber">
+                        <span id="postnumError"></span>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="email">Sähköposti:</label>
-                    <input type="email" id="email" name="email">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="email">Sähköposti:</label>
+                        <input type="email" id="email" name="email">
+                        <span id="emailError"></span>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label>Sukupuoli:</label>
-                    <input type="radio" id="gender_m" name="sex" value="man">
-                    <label for="gender_m">Mies</label>
-                    <input type="radio" id="gender_w" name="sex" value="woman">
-                    <label for="gender_w">Nainen</label>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Sukupuoli:</label>
+                        <input type="radio" id="gender_m" name="gender" value="man">
+                        <label for="gender_m">Mies</label>
+                        <input type="radio" id="gender_w" name="gender" value="woman">
+                        <label for="gender_w">Nainen</label>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label>Kieli:</label>
-                    <input type="checkbox" id="fin_language" name="language" value="suomi">
-                    <label for="fin_language">Suomi</label>
-                    <input type="checkbox" id="other_language" name="language" value="muu kuin suomi">
-                    <label for="other_language">Muu kuin suomi</label>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Kieli:</label>
+                        <input type="checkbox" id="fin_language" name="language" value="suomi">
+                        <label for="fin_language">Suomi</label>
+                        <input type="checkbox" id="other_language" name="language" value="muu kuin suomi">
+                        <label for="other_language">Muu kuin suomi</label>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label>Lisätietoja:</label>
-                    <textarea id="information" name="information"></textarea>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Lisätietoja:</label>
+                        <textarea id="information" name="information"></textarea>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <input type="submit" value="Lähetä">
+                <div class="row">
+                    <div class="col-25">
+                        <button type="button" id="submit" onclick="vahvistalomake()">Lähetä</button>
+                    </div>
                 </div>
-            </div>
-        </form>
+                <p id="error"></p>
+            </form>
+        </div>
     </div>
+    <script src="lomakkeen_validointi.js"></script>
 </body>
 
 </html>
