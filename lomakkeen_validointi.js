@@ -2,14 +2,14 @@
 let form = document.getElementById("lomake");                                   
 let error = document.getElementById("error");
 
-document.getElementById("submit").addEventListener("click", function(event) {
+document.getElementById("submit").addEventListener("click", function(event) { 
     event.preventDefault();
     vahvistalomake();
 });
 
 function vahvistalomake() {
 
-    let tunnus = document.getElementById("username").value;
+    let tunnus = document.getElementById("username").value; 
     let salasana = document.getElementById("password").value;
     let nimi = document.getElementById("name").value;
     let osoite = document.getElementById("address").value;
@@ -17,8 +17,10 @@ function vahvistalomake() {
     let email = document.getElementById("email").value;
     let maa = document.getElementById("country").value;
     let gender = document.querySelector('input[name="gender"]:checked');
-    let kieli = document.querySelector('input[name="language"]:checked');
-    let pattern = /^(?=.*\d)(?=.*[!@£$€&%#])(?=.*[A-Z]).{6,}$/;              
+    let kieli = document.querySelector('input[name="language"]:checked');   
+    let pattern = /^(?=.*\d)(?=.*[!@£$€&%#])(?=.*[A-Z]).{6,}$/;             // Regex salasanalle
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;                        // Regex sähköpostille
+
 
     // Tyhjennetään mahdolliset virheilmoitukset
     document.getElementById("usernameError").innerText = "";
@@ -96,7 +98,7 @@ function vahvistalomake() {
     }
 
     // Sähköpostin validointi
-    if (!email.includes("@") || email.indexOf(".") < email.indexOf("@") || email.includes(" ")) {
+    if (!emailPattern.test(email)) {
         error.innerText = "* Tarkista lomake";
         console.log("Sähköpostiosoitteen validointi epäonnistui");
         error.style.color = "red";
@@ -109,6 +111,3 @@ function vahvistalomake() {
     error.style.color = "green";
     return true;
 }
-
-
-
